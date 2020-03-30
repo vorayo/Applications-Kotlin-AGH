@@ -1,1 +1,1 @@
-# Applications-Kotlin-AGH
+# Kamil Hosaja
