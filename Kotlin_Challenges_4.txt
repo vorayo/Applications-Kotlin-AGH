@@ -1,0 +1,37 @@
+1)
+Null Safety - code modification that prevents app from crashing due to Null exceptions and allows us to take control of this problem.
+Nullable types - types of variables that can contain either value or 'null'. They are created by adding '?' after data types.
+
+
+2)
+Elvis operator - '?:', f.e: 'a ?: b'. This operator sets values depending on whether 'a' is 'null' or not. If 'a' is 'null', operator returns 'b', otherwise it returns 'a'.
+
+3)
+Safe call - '?.'  checks whether variable is 'null' and if so, it returns 'null', or if it's not, then it calls the method.
+'!!' operator tells compiler that variable is not 'null', but if it is, then asks to throw Null Pointer Exception.
+
+4)
+Valid
+Invalid
+Invalid
+Valid 
+
+5)
+fun main()
+fun main()
+{
+    fun didiveIfWhole(a: Int, b: Int): Int? {
+        var dividedTimes: Int? = null
+        var newA: Double = a.toDouble()
+        var remainder: Double = a.toDouble()%b.toDouble()
+        while (remainder == 0.0) {
+            remainder = newA%b
+            newA /= b.toDouble()
+            dividedTimes = dividedTimes ?: 0
+            dividedTimes = if (remainder == 0.0) (dividedTimes + 1) else dividedTimes
+        }
+        return dividedTimes
+    }
+    val answer: Int? = didiveIfWhole(15, 2)
+    if (answer != null) println("Yep, it divides $answer times") else println("Not divisible :[")
+}

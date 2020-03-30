@@ -1,0 +1,47 @@
+1)
+Constant 'lastName' is declared twice in ifs, but especially in this situation, when compiling 'fullName' there's no 'lastName' declared, beacuse neither if is true.
+So 'val lastName' should be defined before ifs, 'val' removed from both ifs, and also there should be else clause with an initialization of 'lastName', because 'fullName' won't be compiled without 'lastName' being initialized.
+And we could also add 'println(fullName) but it's not necessary.
+
+2)
+true
+false
+true
+true
+false
+
+3)
+import kotlin.math.log2
+
+fun main() {
+    val number:Double = 9.11
+    val resultLog = log2(number)
+    if (resultLog%1 == 0.0) {
+        println("$number is a power of 2.")
+    }
+    else {
+        println("$number is NOT a power of 2.")
+    }
+}
+
+4)
+fun main()
+{
+    val number:Int = 7
+    var a:Int = 6
+    var b:Int
+    var rollAll:Double = 0.0
+    var rollMatching:Double = 0.0
+    while(a > 0) {
+        b = 6
+        while(b > 0) {
+            rollAll += 1
+            if (a + b == number) {
+                rollMatching += 1
+            }
+            b -= 1
+        }
+        a -= 1
+    }
+    println("The chance of $number being rolled on two d6 is ${rollMatching/rollAll}")
+}

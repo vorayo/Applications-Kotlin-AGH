@@ -1,0 +1,14 @@
+1)
+Function "doSomething" would compile and print input string i times.
+Function 'threeMultiplication' won't compile, because its' input 'x' value can't be changed. In order to make it work, the 'x = x*3' line should be deleted and the return line should be changed to 'return x*3' 
+Function 'maxValue' won't compile, since the default output type of functions is Unit, but the function returns max, which probably will be Int, so it in order to make it work, the function output should be definied to ": Int".
+
+2)
+fun printResult(userChoice: String, gameChoice: String) {
+    val result: String
+    if(userChoice == gameChoice) result= "Tie!"
+    else if((userChoice == "Rock" && gameChoice == "Scissors") || (userChoice == "Paper" && gameChoice == "Rock") ||
+        (userChoice == "Scissors" && gameChoice == "Paper")) result = "You win!"
+    else result = "You lose!"
+    println("You chose $userChoice. I chose $gameChoice. $result")
+}

@@ -1,0 +1,24 @@
+1)
+11 iteracji
+sum = 55
+
+2)
+a..b - closed range - includes every number from 'a' to 'b' by step (default = 1) including boundaries.
+a until b - half open range - opened on the right end - same as above, but without the 'b' value
+'until' can be replaced with 'downTo' - then the order is decreasing
+
+3)
+Even if we try to do 'a..a' - there's always one value 'a'. 
+
+4)
+'when' works similarly to 'switch case' from c++. It executes different code depending on an input value.
+Basically it's like a group of if/else checking value and executing code.
+'When' seems to be a much better version of 'switch' from c++, because code is much easier and readable without all cases and breaks.
+We can use more than simple constants as conditions - like ranges, functions.
+'When' can be also used without argument, then conditions are boolean. 
+
+5)
+fun main() {
+    val range = 0..10
+    for (i in range) println(range.last-i)
+}

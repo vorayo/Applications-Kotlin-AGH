@@ -1,0 +1,34 @@
+1)
+Lambdas are anonymious functions that can be treated as values - it means we can pass them as arguments, return and so on.
+In order to be used, they need to be assigned to a variable or constant. This type of expression returns value of the last expression in the body.
+
+2)
+'it' variable is a reference to an argument if there is only one argument in lambda expression.
+
+3)
+fun main()
+{
+    fun repeatTask(times: Int, task: () -> Unit) {
+        repeat(times) {
+            task()
+        }
+    }
+    var unafunction: () -> Unit = {
+        println("Doskozzza")
+    }
+}
+
+4)
+fun main()
+{
+    val appRatings = mapOf(
+        "Kalendarz Pro" to arrayOf(1, 5, 5, 4, 2, 1, 5, 4),
+        "Kurier Messenger" to arrayOf(5, 4, 2, 5, 4, 1, 1, 2),
+        "Myszojeleniopedia" to arrayOf(2, 1, 2, 2, 1, 2, 4, 2)
+    )
+    val averageRatings = mutableMapOf<String, Double>()
+    appRatings.forEach {
+        (app, rating) -> averageRatings[app] = rating.reduce{sum, element -> sum + element}/rating.size.toDouble()}
+    val solidRatings = averageRatings.filter {it.value > 3.0}
+    println(solidRatings)
+}

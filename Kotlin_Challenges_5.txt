@@ -1,0 +1,50 @@
+1)
+fun main()
+{
+    fun removeOne(item: Int, list: List<Int>): List<Int> {
+        var newList = list.toMutableList()
+        newList.remove(item)
+        return newList
+    }
+}
+
+2)
+fun main()
+{
+    fun remove(item: Int, list: List<Int>): List<Int> {
+        var newList = list.toMutableList()
+        while (newList.contains(item)) {
+            newList.remove(item)
+        }
+        return newList
+    }
+}
+
+3)
+fun main()
+{
+    fun reverse(array: Array<Int>): Array<Int> {
+        var newArray = array.copyOf()
+        for (i in array.indices) {
+            newArray[i] = array[array.size-i-1]
+        }
+        return newArray
+    }
+}
+
+4)
+fun main() {
+    fun minMax(numbers: Array<Int>): Pair<Int, Int>? {
+        var pair: Pair<Int, Int>? = null
+        var min: Int = Int.MAX_VALUE
+        var max: Int = Int.MIN_VALUE
+        if (numbers.isNotEmpty()) {
+            for (i in numbers.indices) {
+                if (numbers[i] > max) max = numbers[i]
+                if (numbers[i] < min) min = numbers[i]
+            }
+            pair = Pair(min, max)
+        }
+        return pair
+    }
+}
