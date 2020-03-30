@@ -9,7 +9,7 @@ In order to be used, they need to be assigned to a variable or constant. This ty
 fun main()
 {
     fun repeatTask(times: Int, task: () -> Unit) {
-        repeat(times) {
+        for (i in 0 until times) {
             task()
         }
     }
