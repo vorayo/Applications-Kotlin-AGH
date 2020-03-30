@@ -1,5 +1,5 @@
 1)
-Lambdas are anonymious functions that can be treated as values - it means we can pass them as arguments, return and so on.
+Lambdas are anonymous functions that can be treated as values - it means we can pass them as arguments, return and so on.
 In order to be used, they need to be assigned to a variable or constant. This type of expression returns value of the last expression in the body.
 
 2)
